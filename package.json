@@ -1,5 +1,5 @@
 {
-  "name": "sysmon-widget",
+  "name": "mini-system-monitor",
   "version": "1.0.0",
   "description": "Minimal system monitoring widget",
   "main": "main.js",
@@ -13,8 +13,8 @@
     "electron-builder": "^25.1.8"
   },
   "build": {
-    "appId": "com.sysmon.widget",
-    "productName": "SysMon Widget",
+    "appId": "com.mini.system.monitor",
+    "productName": "Mini System Monitor",
     "win": {
       "target": ["portable"],
       "signAndEditExecutable": false
@@ -28,7 +28,7 @@
     "publish": {
       "provider": "github",
       "owner": "wiresv",
-      "repo": "sysmon-widget"
+      "repo": "mini-system-monitor"
     }
   }
 }
