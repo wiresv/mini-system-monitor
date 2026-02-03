@@ -6,13 +6,11 @@ A minimal, always-on-top system monitoring widget for Windows.
 
 ## Stats
 
-| Stat | Description |
-|------|-------------|
-| **CPU Load** | Current CPU utilization (0-100%) |
-| **CPU Temp** | CPU temperature as % of 100°C max |
-| **GPU Load** | Current GPU utilization (0-100%) |
-| **GPU Temp** | GPU temperature as % of 83°C max |
-| **RAM** | Memory usage (0-100%) |
+| Color | Stats | Description |
+|-------|-------|-------------|
+| 🟢 Green | **CPU** | Load %, Temp % (of 100°C) |
+| 🔵 Blue | **GPU** | Load %, Temp % (of 83°C) |
+| 🔴 Red | **RAM** | Memory usage % |
 
 ## Requirements
 
