@@ -2,7 +2,7 @@
 
 A minimal, always-on-top system monitoring widget for Windows.
 
-![widget preview](https://img.shields.io/badge/CPU-12%25%2045%25-a5f9a5?style=flat-square) ![gpu](https://img.shields.io/badge/GPU-8%25%2052%25-a5d4f9?style=flat-square) ![ram](https://img.shields.io/badge/RAM-67%25-f9a5a5?style=flat-square)
+![screenshot](screenshot.png)
 
 ## Stats
 
