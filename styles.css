@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Berkeley Mono', 'Consolas', monospace;
+  font-size: 12px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 24px;
+  padding: 0 6px;
+  background-color: #000000;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+.stat {
+  white-space: nowrap;
+  color: #FFFFFF;
+}
+
+.cpu-pct {
+  color: #A5F9A5;
+}
+
+.gpu-pct {
+  color: #A5D4F9;
+}
+
+.ram-pct {
+  color: #F9A5A5;
+}
