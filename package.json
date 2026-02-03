@@ -16,13 +16,8 @@
     "appId": "com.sysmon.widget",
     "productName": "SysMon Widget",
     "win": {
-      "target": ["nsis"]
-    },
-    "nsis": {
-      "oneClick": true,
-      "allowToChangeInstallationDirectory": false,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true
+      "target": ["portable"],
+      "signAndEditExecutable": false
     },
     "files": [
       "main.js",
