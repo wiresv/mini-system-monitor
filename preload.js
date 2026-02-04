@@ -33,18 +33,23 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Temperature constants
+const TEMP_FLOOR = 30;  // Realistic minimum (room temp + idle heat)
+const CPU_MAX = 100;
+const GPU_MAX = 83;
+
 // Listen for stats updates from main process
 ipcRenderer.on('stats-update', (event, stats) => {
-  // CPU (100°C max optimal) - only update if changed
-  const cpuTempPercent = Math.min(100, Math.round((stats.cpu.temp / 100) * 100));
+  // CPU temp as % of thermal headroom (30°C floor to 100°C max)
+  const cpuTempPercent = Math.max(0, Math.min(100, Math.round(((stats.cpu.temp - TEMP_FLOOR) / (CPU_MAX - TEMP_FLOOR)) * 100)));
   const cpuText = `${stats.cpu.load}% ${cpuTempPercent}%`;
   if (lastValues.cpu !== cpuText) {
     lastValues.cpu = cpuText;
     document.getElementById('cpu').innerHTML = `${stats.cpu.load}<span class="pct cpu-pct">%</span> ${cpuTempPercent}<span class="pct cpu-pct">%</span>`;
   }
 
-  // GPU (83°C max optimal) - only update if changed
-  const gpuTempPercent = Math.round((stats.gpu.temp / 83) * 100);
+  // GPU temp as % of thermal headroom (30°C floor to 83°C max)
+  const gpuTempPercent = Math.max(0, Math.min(100, Math.round(((stats.gpu.temp - TEMP_FLOOR) / (GPU_MAX - TEMP_FLOOR)) * 100)));
   const gpuText = `${stats.gpu.load}% ${gpuTempPercent}%`;
   if (lastValues.gpu !== gpuText) {
     lastValues.gpu = gpuText;
